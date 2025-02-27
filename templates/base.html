@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfólio</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/base.css' %}">
+</head>
+<body>
+    <header>
+        <nav>
+            <h1>Meu Portfólio</h1>
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="/projetos">Projetos</a></li>
+                <li><a href="/sobre">Sobre</a></li>
+                <li><a href="/contato">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        {% block content %}
+        <div class="container">
+            <h2>Bem-vindo ao meu portfólio!</h2>
+            <p>Esta é a página base do projeto.</p>
+        </div>
+        {% endblock %}
+    </main>
+
+    <footer>
+        <p>&copy; 2023 Meu Portfólio - Todos os direitos reservados</p>
+    </footer>
+
+    <script src="{% static 'js/base.js' %}"></script>
+</body>
+</html>
