@@ -1,0 +1,102 @@
+:root {
+    --bg-color: #f0f0f0;
+    --text-color: #333;
+    --accent-color: #4a90e2;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    transition: all 0.3s ease;
+}
+
+#weather-widget {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 15px;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.weather-icon {
+    font-size: 2.5rem;
+    color: var(--accent-color);
+}
+
+.weather-info {
+    font-size: 0.9rem;
+}
+
+.weather-info h2 {
+    margin: 0;
+    font-size: 1.1rem;
+}
+
+.weather-info p {
+    margin: 5px 0 0;
+}
+
+.loading-spinner {
+    width: 40px;
+    height: 40px;
+    border: 4px solid #f3f3f3;
+    border-top: 4px solid #3498db;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+    margin: 10px auto;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+.loading {
+    text-align: center;
+    padding: 20px;
+}
+
+#weather-container:not(.loading) .loading-spinner {
+    display: none;
+}
+
+/* Temas do clima */
+body.theme-clear {
+    --bg-color: #87ceeb;
+    --text-color: #333;
+    --accent-color: #f9d71c;
+}
+
+body.theme-rain {
+    --bg-color: #2c3e50;
+    --text-color: #fff;
+    --accent-color: #3498db;
+}
+
+body.theme-clouds {
+    --bg-color: #95a5a6;
+    --text-color: #2c3e50;
+    --accent-color: #7f8c8d;
+}
+
+body.theme-night {
+    --bg-color: #2c3e50;
+    --text-color: #ecf0f1;
+    --accent-color: #f1c40f;
+}
+
+/* Adicionar tema de erro */
+body.theme-error {
+    --bg-color: #fff5f5;
+    --text-color: #ff4444;
+    --accent-color: #ff4444;
+}
