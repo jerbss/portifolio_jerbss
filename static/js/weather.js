@@ -29,8 +29,8 @@ function getLocalizacao() {
 }
 
 function getClima(latitude, longitude) {
-    // Substitua esta API key pela sua nova key do OpenWeatherMap
-    const apikey = "a947f7174da077bd9beecf2e5f3cf7c4";
+    // Use the API key from the environment variables
+    const apikey = WEATHER_API_KEY;
     const url = `https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&appid=${apikey}&units=metric&lang=pt_br`;
 
     fetch(url)
